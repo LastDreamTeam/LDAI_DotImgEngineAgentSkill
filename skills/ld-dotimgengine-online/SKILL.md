@@ -2,7 +2,7 @@
 name: ld-dotimgengine-online
 description: "角色立绘、参考图编辑、风格与立体光影、多视图和细节修正的生成编排，以及按参考修复 3D 角色资产的工作流。用于锁定已认可设计、局部修复与逐版验收；绑定和 Unity 兼容性须分别实测。"
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
 ---
 
 # LD DotImgEngine Online
