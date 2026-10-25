@@ -2,7 +2,7 @@
 
 `ld-dotimgengine-online` 是以中文为主的角色立绘、参考图编辑、风格与光影渲染、多视图和 PNG 交付技能。以一份明确的当前参考和用户认可记录控制迭代，减少改图时脸部、服装和配件被重新设计的问题。
 
-当前版本：**0.2.1**。技能入口：[SKILL.md](skills/ld-dotimgengine-online/SKILL.md)。在原有保真生图流程上，增加按参考核对的 3D 资产局部修复方法；外观、绑定和运行时验证分别验收。
+当前版本：**0.3.0**。技能入口：[SKILL.md](skills/ld-dotimgengine-online/SKILL.md)。在原有保真生图与 3D 资产局部修复基础上，增加扁平图透明分层及重组。外观、分层技术检查、绑定和运行时验证分别验收。
 
 ## 使用
 
@@ -25,6 +25,8 @@
 
 - [3D 修复与参考核对](skills/ld-dotimgengine-online/references/3d-repair-workflow.md)：参考作用范围、贴图与几何分诊、融合曲面与服装层次、局部保护、重导验收及绑定测试边界。
 
+- [透明分层与重组](skills/ld-dotimgengine-online/references/transparent-layer-workflow.md)：共同画布、原像素与隐藏区域重建、多地标校准、透明边缘、RGBA 检查及按遮挡层序复合。
+
 ## 验证
 
 在仓库根目录运行：
@@ -33,6 +35,7 @@
 python -B -m unittest discover -s tests -v
 python -B tools/check_package.py
 python -B skills/ld-dotimgengine-online/scripts/png_tools.py --help
+python -B skills/ld-dotimgengine-online/scripts/rgba_layers.py --help
 ```
 
 测试在临时目录生成几何图形，覆盖尺寸/哈希、原生尺寸保护区域差异、保护像素合成、错误输入和不覆盖已有文件。仓库不包含角色资产。脚本测试不能证明生成器的视觉保真度，最终仍须逐张目视验收。
