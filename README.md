@@ -2,7 +2,7 @@
 
 `ld-dotimgengine-online` 是以中文为主的角色立绘、参考图编辑、风格与光影渲染、多视图和 PNG 交付技能。以一份明确的当前参考和用户认可记录控制迭代，减少改图时脸部、服装和配件被重新设计的问题。
 
-当前版本：**0.1.0**。技能入口：[SKILL.md](skills/ld-dotimgengine-online/SKILL.md)。
+当前版本：**0.2.0**。技能入口：[SKILL.md](skills/ld-dotimgengine-online/SKILL.md)。在原有保真生图流程上，增加按参考核对的 3D 资产局部修复方法；外观、绑定和运行时验证分别验收。
 
 ## 使用
 
@@ -22,6 +22,8 @@
 - [公开工具编排](skills/ld-dotimgengine-online/references/toolchain.md)：读取像素、显式传图、异步等待、保存与附件交付。
 - [提示词模板](skills/ld-dotimgengine-online/references/prompt-templates.md)与[参考清单模板](skills/ld-dotimgengine-online/references/reference-manifest.template.json)。
 - [验收与脚本示例](skills/ld-dotimgengine-online/references/acceptance.md)、[失败案例](skills/ld-dotimgengine-online/references/failure-cases.md)、[迭代约定](skills/ld-dotimgengine-online/references/iteration.md)。
+
+- [3D 修复与参考核对](skills/ld-dotimgengine-online/references/3d-repair-workflow.md)：参考作用范围、贴图与几何分诊、融合曲面与服装层次、局部保护、重导验收及绑定测试边界。
 
 ## 验证
 
