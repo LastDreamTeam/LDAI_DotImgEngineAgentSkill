@@ -1,0 +1,8 @@
+interface:
+  display_name: "LDAI_Dot3DBuildAgentSkill"
+  short_description: "从参考图、多视图到模型生成修复、绑定回归及可靠交付的完整生产流水线"
+  default_prompt: "使用 $ld-dot3dbuild-online，从我认可的参考或已有模型出发，保留正确区域，完成生成、修模、按需绑定和成品验收交付。"
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  allow_implicit_invocation: true

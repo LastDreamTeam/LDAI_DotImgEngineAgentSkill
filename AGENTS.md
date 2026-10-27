@@ -1,6 +1,6 @@
 # Repository scope
 
-本仓库维护 `skills/ld-dotimgengine-online`，中文优先。核心约束在 SKILL.md，模式细节放 references，确定性辅助程序放 scripts，测试和维护说明留在仓库层。
+本仓库维护 `skills/ld-dot3dbuild-online`，中文优先。核心约束在 SKILL.md，模式细节放 references，确定性辅助程序放 scripts，测试和维护说明留在仓库层。
 
 - 不提交用户图像、聊天原文、消息标识、凭据、本机路径或私有服务实现。示例只用抽象文件名和合成几何。
 - 不把单次用户的服装或比例偏好变为所有角色的默认设计；将它们标记为具体案例的回归约束。

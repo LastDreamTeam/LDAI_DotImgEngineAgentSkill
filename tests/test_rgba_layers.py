@@ -10,7 +10,7 @@ import unittest
 
 from PIL import Image, PngImagePlugin
 
-SCRIPT = Path(__file__).resolve().parents[1] / "skills/ld-dotimgengine-online/scripts/rgba_layers.py"
+SCRIPT = Path(__file__).resolve().parents[1] / "skills/ld-dot3dbuild-online/scripts/rgba_layers.py"
 sys.path.insert(0, str(SCRIPT.parent))
 spec = importlib.util.spec_from_file_location("rgba_layers", SCRIPT)
 layers = importlib.util.module_from_spec(spec)

@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "skill_version": "1.0.0",
+  "asset_kind": null,
+  "source_revision": null,
+  "approved_baseline": null,
+  "input_files": [],
+  "coordinate_convention": null,
+  "required_parts": [],
+  "protected_invariants": [],
+  "budget": {
+    "limit": null,
+    "unit": null,
+    "charged": null,
+    "tasks": []
+  },
+  "stages": [
+    {
+      "name": "reference",
+      "status": "unclear",
+      "inputs": [],
+      "outputs": [],
+      "evidence": [],
+      "failures": [],
+      "rollback_revision": null,
+      "execution_state": "not_started",
+      "not_applicable_reason": null
+    },
+    {
+      "name": "views_layers",
+      "status": "unclear",
+      "inputs": [],
+      "outputs": [],
+      "evidence": [],
+      "failures": [],
+      "rollback_revision": null,
+      "execution_state": "not_started",
+      "not_applicable_reason": null
+    },
+    {
+      "name": "generation",
+      "status": "unclear",
+      "inputs": [],
+      "outputs": [],
+      "evidence": [],
+      "failures": [],
+      "rollback_revision": null,
+      "execution_state": "not_started",
+      "not_applicable_reason": null
+    },
+    {
+      "name": "geometry_materials",
+      "status": "unclear",
+      "inputs": [],
+      "outputs": [],
+      "evidence": [],
+      "failures": [],
+      "rollback_revision": null,
+      "execution_state": "not_started",
+      "not_applicable_reason": null
+    },
+    {
+      "name": "rig_fit",
+      "status": "unclear",
+      "inputs": [],
+      "outputs": [],
+      "evidence": [],
+      "failures": [],
+      "rollback_revision": null,
+      "execution_state": "not_started",
+      "not_applicable_reason": null
+    },
+    {
+      "name": "motion_regression",
+      "status": "unclear",
+      "inputs": [],
+      "outputs": [],
+      "evidence": [],
+      "failures": [],
+      "rollback_revision": null,
+      "execution_state": "not_started",
+      "not_applicable_reason": null
+    },
+    {
+      "name": "export_delivery",
+      "status": "unclear",
+      "inputs": [],
+      "outputs": [],
+      "evidence": [],
+      "failures": [],
+      "rollback_revision": null,
+      "execution_state": "not_started",
+      "not_applicable_reason": null
+    }
+  ],
+  "delivery": {
+    "editable_source": null,
+    "exports": [],
+    "evidence": [],
+    "persistent_copies": [],
+    "download_hash_verified": false
+  },
+  "known_defects": [],
+  "untested_scope": [],
+  "user_acceptance": null
+}

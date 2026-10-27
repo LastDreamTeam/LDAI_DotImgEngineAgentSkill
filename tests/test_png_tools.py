@@ -13,7 +13,7 @@ import unittest
 from PIL import Image, ImageDraw, PngImagePlugin
 
 ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = ROOT / "skills/ld-dotimgengine-online/scripts/png_tools.py"
+SCRIPT = ROOT / "skills/ld-dot3dbuild-online/scripts/png_tools.py"
 spec = importlib.util.spec_from_file_location("png_tools", SCRIPT)
 png = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(png)

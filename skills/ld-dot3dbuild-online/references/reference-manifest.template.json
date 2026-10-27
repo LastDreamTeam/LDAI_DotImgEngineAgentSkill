@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "skill_version": "1.0.0",
+  "project_id": "example-character-study",
+  "revision": "r001",
+  "current_primary": "front-approved-r001",
+  "references": [
+    {
+      "id": "front-approved-r001",
+      "file": "private/front-approved-r001.png",
+      "sha256": null,
+      "native_size": null,
+      "status": "user_accepted",
+      "acceptance": {
+        "source": "example-only: replace with a private paraphrase of explicit user approval",
+        "scope": "identity, complete front design and three components",
+        "recorded_at": null
+      },
+      "role": "primary_identity_and_design",
+      "supersedes": null,
+      "immutable": true
+    },
+    {
+      "id": "structure-secondary",
+      "file": "private/structure-reference.png",
+      "sha256": null,
+      "native_size": null,
+      "status": "reference_only",
+      "role": "side_and_back_garment_structure_only",
+      "supersedes": null,
+      "immutable": true
+    }
+  ],
+  "region_priority": {
+    "face_and_eyes": [
+      "front-approved-r001"
+    ],
+    "front_ornament": [
+      "front-approved-r001"
+    ],
+    "side_back_clothing": [
+      "front-approved-r001",
+      "structure-secondary"
+    ],
+    "components": [
+      "front-approved-r001",
+      "structure-secondary"
+    ]
+  },
+  "design_freeze": [
+    "identity",
+    "silhouette",
+    "proportions",
+    "facial_structure",
+    "clothing",
+    "main_colors"
+  ],
+  "pixel_freeze": {
+    "enabled": false,
+    "source_id": "front-approved-r001",
+    "mask_file": null,
+    "mask_semantics": "L mode binary: 255 copies source RGBA; 0 uses candidate",
+    "coordinate_system": "same_native_canvas_no_resampling",
+    "max_channel_difference": 0
+  },
+  "allowed_changes": [
+    "specified_view",
+    "lighting",
+    "shadows",
+    "ambient_occlusion"
+  ],
+  "components": [
+    {
+      "id": "component-A",
+      "body_side": "left",
+      "depth": "rear",
+      "anchor": "example-left-shoulder",
+      "cable_endpoints": [
+        "A",
+        "left-back"
+      ],
+      "required_in_all_views": true
+    },
+    {
+      "id": "component-B",
+      "body_side": "right",
+      "depth": "rear",
+      "anchor": "example-right-shoulder",
+      "cable_endpoints": [
+        "B",
+        "right-back"
+      ],
+      "required_in_all_views": true
+    },
+    {
+      "id": "component-C",
+      "body_side": "center",
+      "depth": "rear",
+      "anchor": "example-back",
+      "cable_endpoints": [],
+      "required_in_all_views": true
+    }
+  ],
+  "case_specific_regression": [
+    "example-only: rounded eye structure",
+    "example-only: slim proportions",
+    "example-only: white knee coverage",
+    "cables and component positions",
+    "front original remains unchanged"
+  ],
+  "outputs": [],
+  "output_record_template": {
+    "id": "candidate-r002-back",
+    "file": "private/candidate-r002-back.png",
+    "view": "back",
+    "reference_ids": [
+      "front-approved-r001",
+      "structure-secondary"
+    ],
+    "operation": "generation",
+    "parent_output_id": null,
+    "native_generated_size": null,
+    "delivered_size": null,
+    "sha256": null,
+    "generation_state": "not_submitted",
+    "visual_review": "pending",
+    "pixel_check": "not_applicable",
+    "component_visibility": {
+      "component-A": "pending",
+      "component-B": "pending",
+      "component-C": "pending"
+    },
+    "observed_drift": [],
+    "user_acceptance": {
+      "status": "pending",
+      "scope": null,
+      "recorded_at": null
+    },
+    "change_regions": [],
+    "regression_results": [],
+    "supersedes": null
+  }
+}

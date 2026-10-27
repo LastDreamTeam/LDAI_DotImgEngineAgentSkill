@@ -11,7 +11,7 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL = ROOT / "skills/ld-dotimgengine-online"
+SKILL = ROOT / "skills/ld-dot3dbuild-online"
 
 
 def check():
@@ -20,15 +20,15 @@ def check():
     content = (SKILL / "SKILL.md").read_text(encoding="utf-8")
     # The package intentionally uses this narrow YAML subset. Reject variations
     # rather than pretending that this implements general YAML parsing.
-    front = re.match(r'\A---\nname: ([a-z0-9-]+)\ndescription: ("[^\n]+")\nmetadata:\n  version: ("[0-9]+\.[0-9]+\.[0-9]+")\n---\n', content)
+    front = re.match(r'\A---\nname: ([a-z0-9-]+)\ndescription: ("[^\n]+")\n---\n', content)
     if not front:
         problems.append("SKILL.md: unsupported or invalid package frontmatter")
     else:
-        name, description, version = front.groups()
+        name, description = front.groups()
+        version = re.search(r"版本：([0-9]+\.[0-9]+\.[0-9]+)", content).group(1)
         if name != SKILL.name or len(name) > 64:
             problems.append("SKILL.md: skill name does not match directory")
         description = json.loads(description)
-        version = json.loads(version)
         if not description.strip() or len(description) > 1024 or any(c in description for c in "<>"):
             problems.append("SKILL.md: invalid description")
         if f"## {version} " not in (ROOT / "CHANGELOG.md").read_text(encoding="utf-8"):
@@ -42,7 +42,7 @@ def check():
     }
     for path in files:
         rel = path.relative_to(ROOT).as_posix()
-        if path.suffix not in {".md", ".json", ".py"} and path.name != ".gitignore":
+        if path.suffix not in {".md", ".json", ".py", ".yaml", ".svg"} and path.name != ".gitignore":
             problems.append(f"{rel}: unexpected file type; review before publication")
             continue
         text = path.read_text(encoding="utf-8")
@@ -67,7 +67,7 @@ def check():
     ids = [r["id"] for r in manifest["references"]]
     if len(ids) != len(set(ids)) or manifest["current_primary"] not in ids:
         problems.append("Reference template: duplicate IDs or unknown current_primary")
-    if manifest["skill_version"] != (json.loads(front.group(3)) if front else None):
+    if manifest["skill_version"] != (version if front else None):
         problems.append("Reference template: skill version mismatch")
     for priorities in manifest["region_priority"].values():
         if not priorities or any(item not in ids for item in priorities):
