@@ -5,7 +5,7 @@ description: "从立绘、参考图和多视图到 AI/程序化三维生成、�
 
 # LDAI_Dot3DBuildAgentSkill
 
-版本：1.0.0。原 `ld-dotimgengine-online` 的扩展总入口，保留原图像能力。
+版本：1.0.1。原 `ld-dotimgengine-online` 的扩展总入口，保留原图像能力。
 
 将立绘和四视图视为后续建模的输入，而不是与模型修复脱节的终点。
 沿用已经验收的成果，只重跑受变更影响的阶段；静态资产不强制绑骨，

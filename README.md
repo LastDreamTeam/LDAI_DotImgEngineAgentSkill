@@ -1,6 +1,6 @@
 # LDAI_Dot3DBuildAgentSkill
 
-当前版本 **1.0.0**，新技能入口 [ld-dot3dbuild-online](skills/ld-dot3dbuild-online/SKILL.md)。
+当前版本 **1.0.1**，新技能入口 [ld-dot3dbuild-online](skills/ld-dot3dbuild-online/SKILL.md)。
 
 从立绘、参考图和四视图，经 AI 或程序化建模、几何材质修复、按需绑骨与配饰试穿、动作回归，直到可编辑源、导出、真实录屏和持久交付。每阶段明确输入、出口检查和失败回退，不把生图与修模分成孤立任务。
 

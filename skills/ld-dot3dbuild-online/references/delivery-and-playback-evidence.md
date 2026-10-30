@@ -34,3 +34,16 @@ stills/exports available. Do not use those omissions to conceal a known model de
 A temporary workspace can disappear. On resume, verify durable copies and task state
 before claiming progress. An exact backup recovery, a reconstruction from earlier
 source, and a visually similar replacement are different outcomes; label them honestly.
+
+## Asset preservation is not an atomic project snapshot
+
+- Record the captured revision/commit when available, whether relevant files were dirty, and the capture interval. A valid archive or matching file hash proves those bytes were copied, not that a live project's files all represent one consistent instant or one source commit.
+- List the package's scope and exclusions. Include the editable scene, texture/material/shader dependencies and necessary target-engine import metadata (for example Unity asset GUID metadata) within authorized scope. A standalone GLB backup does not preserve every project reference, importer setting or authoring modifier.
+- Map archive members to their source revisions and checksums. Report separately: transfer complete, archive readable, member hashes checked, source reopened, and target project restored. Do not label a subset of critical assets a full-project backup.
+- On a stressed machine, prioritize small irreplaceable source changes and manifests, then bounded per-asset transfers. Respect the current task's CPU, disk, network and concurrency limits; do not invent a universal safe utilization percentage. Avoid concurrent heavy compression, full rescans and render/build workloads merely to generate evidence. Preserve resumable progress and mark deferred validation explicitly; do not delete originals as part of an unverified backup.
+
+## Target-runtime visual acceptance
+
+- Record the target engine/render pipeline, camera framing, output size, lighting/material configuration and exact asset revision for comparable before/after frames. Compare silhouette, value/color hierarchy, key/fill/rim separation, texture readability and background contrast against the accepted concept; a successful import is not concept-level visual fidelity.
+- A rim-light or shader change is a hypothesis until evaluated in the real scene. Check moving poses and the intended gameplay camera, not only a staged close-up. Preserve collision shapes, hitboxes, interaction timing and visibility/readability needed for play; attractive stills cannot certify unchanged gameplay.
+- Keep static inspection, compile/import, runtime playback, performance and user visual acceptance as separate results. If runtime testing is unavailable or deliberately deferred to protect the machine, report the candidate and missing evidence rather than substituting script checks or an offline render.

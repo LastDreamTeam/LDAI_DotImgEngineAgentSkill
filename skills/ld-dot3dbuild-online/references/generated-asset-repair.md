@@ -25,3 +25,9 @@
 Official starting points (recheck current behavior):
 - https://docs.meshy.ai/en/api/developer-platform
 - https://help.meshy.ai/en/articles/16497761-why-can-t-i-view-my-api-generated-assets-in-workspace
+
+## Per-item provenance and LOD handoff
+
+- Keep an item-to-source table for combined generations: requested item, source batch/task, extracted object, local repair or procedural replacement, export, and evidence. A mixed batch must not be described as entirely provider-generated. Preserve the original combined mesh and record shared texture dependencies before splitting.
+- Verify each extracted item's origin, scale, material slots, UVs and packed/external textures in a fresh import. Object count alone cannot prove all requested items exist or are usable.
+- Treat each LOD as a candidate with measured evaluated triangles, bounds, material/texture cost and a common pivot/axis. Check silhouette, thin supports and negative spaces at intended screen size, then check switching in the target engine for popping, clipping and material changes. A decimated GLB or a proposed threshold is not a tested LOD setup.
