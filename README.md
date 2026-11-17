@@ -3,9 +3,11 @@
 > **自用项目** · 本仓库主要供维护者自用。
 
 
-当前版本 **1.0.1**，新技能入口 [ld-dot3dbuild-online](skills/ld-dot3dbuild-online/SKILL.md)。
+当前版本 **1.1.0**，新技能入口 [ld-dot3dbuild-online](skills/ld-dot3dbuild-online/SKILL.md)。
 
 从立绘、参考图和四视图，经 AI 或程序化建模、几何材质修复、按需绑骨与配饰试穿、动作回归，直到可编辑源、导出、真实录屏和持久交付。每阶段明确输入、出口检查和失败回退，不把生图与修模分成孤立任务。
+
+角色参考标准：一张非写实正侧背三视图，加四张独立的写实材质感 3D 风格正/左/右/背视图。详见 [Meshy 角色交付约定](skills/ld-dot3dbuild-online/references/meshy-character-views.md)，其中区分原生分辨率、AI 超分和真实模型验证。
 
 ## 安装和迁移
 
@@ -22,3 +24,4 @@ python -B tools/check_package.py
 保留原图像与透明分层脚本接口。测试使用合成图片，不证明视觉、蒙皮或游戏实装通过。新增3D流程已做文档场景核对，未在本次维护中重新制作或运行任何真实模型。
 
 完整流程与参考文档见新技能入口；版本记录见 [CHANGELOG.md](CHANGELOG.md)，验证边界见 [VALIDATION.md](VALIDATION.md)，维护见 [CONTRIBUTING.md](CONTRIBUTING.md)。版权和许可仍按 [COPYRIGHT.md](COPYRIGHT.md)，不新增法律许可。
+

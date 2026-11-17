@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "skill_version": "1.0.1",
+  "skill_version": "1.1.0",
   "project_id": "example-character-study",
   "revision": "r001",
   "current_primary": "front-approved-r001",
@@ -141,3 +141,4 @@
     "supersedes": null
   }
 }
+

@@ -5,7 +5,7 @@ description: "从立绘、参考图和多视图到 AI/程序化三维生成、�
 
 # LDAI_Dot3DBuildAgentSkill
 
-版本：1.0.1。原 `ld-dotimgengine-online` 的扩展总入口，保留原图像能力。
+版本：1.1.0。原 `ld-dotimgengine-online` 的扩展总入口，保留原图像能力。
 
 将立绘和四视图视为后续建模的输入，而不是与模型修复脱节的终点。
 沿用已经验收的成果，只重跑受变更影响的阶段；静态资产不强制绑骨，
@@ -40,6 +40,9 @@ description: "从立绘、参考图和多视图到 AI/程序化三维生成、�
 用户指定只做某阶段时遵守该边界，不擅自生成模型或花费后续额度。
 
 ## 图像与视图分支
+
+- Meshy 角色参考按[三视图、独立四视图与 8K 交付](references/meshy-character-views.md)执行：
+  非写实设计三视图先行，再交付四张独立 3D 风格图；保留两类产物，核实真实尺寸与超分来源。
 
 - 读取[参考图与立绘](references/image-authoring.md)，按[图像工作流](references/workflow.md)、
   [提示词](references/prompt-templates.md)、[工具编排](references/toolchain.md)、
@@ -80,3 +83,4 @@ description: "从立绘、参考图和多视图到 AI/程序化三维生成、�
 原图像脚本 `scripts/png_tools.py` 和分层检查 `scripts/rgba_layers.py` 的接口保留；
 分层的具体执行与验证见[透明分层流程](references/transparent-layer-workflow.md)。
 旧技能名仅用于迁移识别，新的调用名为 `$ld-dot3dbuild-online`。
+
