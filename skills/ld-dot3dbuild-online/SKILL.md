@@ -42,14 +42,16 @@ description: "从立绘、参考图和多视图到 AI/程序化三维生成、�
 ## 图像与视图分支
 
 - Meshy 角色参考按[三视图、独立四视图与 8K 交付](references/meshy-character-views.md)执行：
-  非写实设计三视图先行，再交付四张独立 3D 风格图；保留两类产物，核实真实尺寸与超分来源。
+  非写实设计三视图先行，再交付正／正左／正背／正右四张独立 3D 风格图；45° 只作加图，不能占位。
 
-- 读取[参考图与立绘](references/image-authoring.md)，按[图像工作流](references/workflow.md)、
-  [提示词](references/prompt-templates.md)、[工具编排](references/toolchain.md)、
-  [图像验收](references/acceptance.md)和[图像失败案例](references/failure-cases.md)执行。
+- 当前是改图时先看[参考图与立绘](references/image-authoring.md)。其余按问题加载：
+  [流程](references/workflow.md)、[提示词](references/prompt-templates.md)、[工具](references/toolchain.md)、
+  [验收](references/acceptance.md)或[失败排查](references/failure-cases.md)，不必全读。
+- 锁定用户认可的脸与轮廓；小改只动指定视角和部位。交付前对照原图检查已纠正的问题，有复发就退回该候选。
 - 按[视图和透明分层](references/views-and-layers.md)固定顶/底/左右定义与翻转基准。
   顶视图可作为模型生成服务的主图，但不得把它误称海平面正视。
-- 参考图多视图不是同一真实网格的正交渲染；标明矛盾和推断。
+- 盘绕生物等结构难以用图确认时，先用[简模验证骨架走向与遮挡](references/meshy-character-views.md#盘绕生物先验结构再出图)。
+  参考图多视图不是同一真实网格的正交渲染；标明矛盾和推断。
   输出长边达到 8K 不等于原生 8K 细节，先对齐设计再做高清交付。
 
 ## 三维与修复分支
